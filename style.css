@@ -1,0 +1,274 @@
+/* ================= GLOBAL ================= */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* ================= FRONT PAGE ================= */
+.front-body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+}
+
+.simple-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  width: 850px;
+}
+
+.side-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.image-box img {
+  width: 260px;
+  max-width: 100%;
+}
+
+.text-box h1 {
+  color: #1f3c88;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  color: #555;
+}
+
+.text-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.text-box li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.simple-btn {
+  padding: 12px 28px;
+  background-color: #1f3c88;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.simple-btn:hover {
+  background-color: #162d66;
+}
+
+/* ================= FORM ================= */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+h3 {
+  margin-top: 25px;
+  color: #1f3c88;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 5px;
+}
+
+/* ================= INPUTS ================= */
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #1f3c88;
+  box-shadow: 0 0 0 2px rgba(31,60,136,0.15);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  background: #1f3c88;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #162d66;
+}
+
+/* ================= RESUME OUTPUT ================= */
+#resume {
+  display: none;
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= RESUME HEADER ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #1f3c88;
+}
+
+.header p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+#rphoto {
+  width: 130px;
+  height: 160px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+
+/* ================= SECTIONS ================= */
+#resume h3 {
+  color: #1f3c88;
+  margin-top: 25px;
+}
+
+/* ================= TABLE ================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  background: #1f3c88;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+td {
+  padding: 10px;
+  font-size: 14px;
+}
+
+table, th, td {
+  border: 1px solid #d1d5db;
+}
+
+/* ================= LISTS ================= */
+ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.sign {
+  text-align: right;
+}
+
+#rsign {
+  margin-top: 35px;
+  font-weight: bold;
+}
+
+/* ================= PRINT (ONLY RESUME) ================= */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #resume, #resume * {
+    visibility: visible;
+  }
+
+  #resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .side-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-box img {
+    width: 200px;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #rphoto {
+    margin-top: 15px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

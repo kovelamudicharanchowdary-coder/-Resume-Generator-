@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            background:white;
+            width:90%;
+            max-width:900px;
+            border-radius:20px;
+            padding:50px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            box-shadow:0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .left{
+            width:50%;
+        }
+
+        .left h1{
+            font-size:42px;
+            margin-bottom:20px;
+            color:#333;
+        }
+
+        .left p{
+            font-size:18px;
+            color:#555;
+            margin-bottom:30px;
+        }
+
+        .left button{
+            padding:15px 30px;
+            font-size:18px;
+            border:none;
+            border-radius:30px;
+            background:#4facfe;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .left button:hover{
+            background:#007bff;
+            transform:scale(1.05);
+        }
+
+        .right{
+            width:45%;
+            text-align:center;
+        }
+
+        .right img{
+            width:100%;
+            max-width:350px;
+        }
+
+        @media(max-width:768px){
+            .container{
+                flex-direction:column;
+                text-align:center;
+            }
+            .left, .right{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left">
+            <h1>Online Resume Builder</h1>
+            <p>
+                Create a professional resume in minutes.<br>
+                Simple, fast and free resume generator.
+            </p>
+
+            <!-- next page ki link -->
+            <button onclick="goToBuilder()">Create Resume</button>
+        </div>
+
+        <div class="right">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Resume Image">
+        </div>
+
+    </div>
+
+<script>
+    function goToBuilder(){
+        // mee form page name ikada pettali
+        window.location.href = "resume.html";
+    }
+</script>
+
+</body>
+</html>

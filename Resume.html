@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Resume Builder</h2>
+
+<div class="form">
+
+  <input id="name" placeholder="Full Name">
+  <input id="address" placeholder="Address">
+  <input id="phone" placeholder="Phone Number">
+  <input id="email" placeholder="Email">
+  <input id="linkedin" placeholder="LinkedIn URL">
+
+  <label>Upload Photo</label>
+  <input type="file" id="photo" accept="image/*">
+
+  <textarea id="objective" placeholder="Career Objective"></textarea>
+
+  <!-- EDUCATION -->
+  <h3>Education Details</h3>
+  <input id="eq" placeholder="Qualification">
+  <input id="ei" placeholder="Institution">
+  <input id="eb" placeholder="Board / University">
+  <input id="ey" placeholder="Year">
+  <input id="ep" placeholder="Percentage">
+  <button type="button" onclick="addEducation()">Add Education</button>
+
+  <!-- SKILLS -->
+  <h3>Technical Skills</h3>
+  <textarea id="skills" placeholder="Java, SQL, HTML, CSS"></textarea>
+
+  <!-- PROJECT -->
+  <h3>Project Details</h3>
+  <input id="projectTitle" placeholder="Project Title">
+  <textarea id="projectDesc" placeholder="Project Description"></textarea>
+
+  <!-- INTERNSHIP -->
+  <h3>Internship Details</h3>
+  <input id="internCompany" placeholder="Company Name">
+  <input id="internRole" placeholder="Role">
+  <textarea id="internDesc" placeholder="Internship Description"></textarea>
+
+  <!-- ACHIEVEMENTS -->
+  <h3>Academic Achievements</h3>
+  <textarea id="achievements" placeholder="One per line"></textarea>
+
+  <!-- ACTIVITIES -->
+  <h3>Extra Curricular Activities</h3>
+  <textarea id="activities" placeholder="One per line"></textarea>
+
+  <!-- PERSONAL -->
+  <h3>Personal Details</h3>
+  <input id="father" placeholder="Father's Name">
+  <input id="dob" placeholder="Date of Birth">
+  <input id="sex" placeholder="Sex">
+  <input id="marital" placeholder="Marital Status">
+  <input id="nationality" placeholder="Nationality">
+  <input id="languages" placeholder="Languages Known">
+  <input id="strengths" placeholder="Strengths">
+
+  <input id="place" placeholder="Place">
+  <input id="date" placeholder="Date">
+  <input id="signature" placeholder="Signature (Name)">
+
+  <button onclick="generateResume()">Generate Resume</button>
+</div>
+
+<hr>
+
+<!-- ================= RESUME OUTPUT ================= -->
+<div id="resume">
+
+  <div class="header">
+    <div>
+      <h1 id="rname"></h1>
+      <p id="raddress"></p>
+      <p>📞 <span id="rphone"></span></p>
+      <p>✉ <span id="remail"></span></p>
+      <p>🔗 <span id="rlinkedin"></span></p>
+    </div>
+    <img id="rphoto">
+  </div>
+
+  <h3>CAREER OBJECTIVE</h3>
+  <p id="robjective"></p>
+
+  <h3>EDUCATIONAL QUALIFICATION</h3>
+  <table id="eduTable">
+    <tr>
+      <th>Qualification</th>
+      <th>Institution</th>
+      <th>Board / University</th>
+      <th>Year</th>
+      <th>Percentage</th>
+    </tr>
+  </table>
+
+  <h3>TECHNICAL SKILLS</h3>
+  <p id="rskills"></p>
+
+  <h3>PROJECT DETAILS</h3>
+  <p><b>Title:</b> <span id="rprojectTitle"></span></p>
+  <p id="rprojectDesc"></p>
+
+  <h3>INTERNSHIP DETAILS</h3>
+  <p><b>Company:</b> <span id="rinternCompany"></span></p>
+  <p><b>Role:</b> <span id="rinternRole"></span></p>
+  <p id="rinternDesc"></p>
+
+  <h3>ACADEMIC ACHIEVEMENTS</h3>
+  <ul id="rachievements"></ul>
+
+  <h3>EXTRA CURRICULAR ACTIVITIES</h3>
+  <ul id="ractivities"></ul>
+
+  <h3>PERSONAL DETAILS</h3>
+  <p>Father: <span id="rfather"></span></p>
+  <p>DOB: <span id="rdob"></span></p>
+  <p>Sex: <span id="rsex"></span></p>
+  <p>Marital Status: <span id="rmarital"></span></p>
+  <p>Nationality: <span id="rnationality"></span></p>
+  <p>Languages: <span id="rlanguages"></span></p>
+  <p>Strengths: <span id="rstrengths"></span></p>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <p><b>Place:</b> <span id="rplace"></span></p>
+      <p><b>Date:</b> <span id="rdate"></span></p>
+    </div>
+    <div class="sign">
+      <p>Signature</p>
+      <p id="rsign"></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
